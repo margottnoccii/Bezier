@@ -15,7 +15,7 @@ body {
 
 p {
 	margin: 0 0 1em 0;
-	max-width: 45em;
+	max-width: 46em;
 }
 
 h1 {
@@ -74,5 +74,8 @@ ul {
 	}
 	img {
 		width: 100%;
+	}
+	p{
+		width:100%;
 	}
 }
