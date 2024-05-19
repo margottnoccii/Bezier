@@ -15,7 +15,7 @@ body {
 
 p {
 	margin: 0 0 1em 0;
-	max-width: 46em;
+	max-width: 47em;
 }
 
 h1 {
@@ -33,6 +33,8 @@ iframe {
 	display: block;
 	border: none;
 	width: 100%;
+	margin-bottom: -13em;
+	/* height: 300; */
 }
 
 header,

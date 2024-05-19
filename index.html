@@ -94,11 +94,13 @@
 							Una Curva di Bezier Lineare di 1. grado contiene due punti di controllo, viene quindi definita con n = 2.
 							<br><br>
 							<img src="assets/img/lineare.png ">
-							<li>Una Curva di Bézier Quadratica di 2. grado contiene tre punti di controllo, viene quindi definita con n = 3.</li>
-							<br>
+							<br><br>
+							Una Curva di Bézier Quadratica di 2. grado contiene tre punti di controllo, viene quindi definita con n = 3.
+							<br><br>
 							<img src="assets\img\quadratica.png">
-							<li>Una Curva di Bézier Cubica di 3. grado contiene quattro punti di controllo, viene quindi definita con n = 4. <br> E così via …</li>
-							<br>
+							<br><br>
+							Una Curva di Bézier Cubica di 3. grado contiene quattro punti di controllo, viene quindi definita con n = 4. <br> E così via …
+							<br><br>
 							<img src="assets\img\cubica vera.png">
 				
 				</p>
@@ -121,9 +123,9 @@
 					<br> <br>
 					In questo caso, per ottenere il punto interpolato aggiungiamo la tesima frazione di distanza che intercorre tra questi due punti a P, quindi:
 					<br><br>
-						<li>Per t = 0, P = P<sub>0</sub> (il punto si troverà all’inizio).</li><br>
-						<li>Per t = 1, P = P<sub>1</sub> (il punto si troverà alla fine).</li><br>
-						<li>Per t = 0.5, P = Punto Intermedio tra P<sub>0</sub> e P<sub>1</sub>.</li>
+						<li>Per t = 0,&ensp;&emsp;&ensp;&ensp;&ensp; P = P<sub>0</sub> (il punto si troverà all’inizio).</li><br>
+						<li>Per t = 1,&ensp;&emsp;&ensp;&ensp;&ensp; P = P<sub>1</sub> (il punto si troverà alla fine).</li><br>
+						<li>Per t = 0.5,&ensp;&emsp; P = Punto Intermedio tra P<sub>0</sub> e P<sub>1</sub>.</li>
 					<br><br>
 						<li>per ogni valore compreso tra 0 e 1 otterremo un punto nel segmento linea che collega p0 e p1
 					<br> <br>
@@ -132,6 +134,10 @@
 					P = P<sub>0</sub> + t(P<sub>1</sub> – P<sub>0</sub>)   &ensp;&emsp;&emsp; 0 < t < 1 <br><br>
 				</span>
 					Fare Interpolazione Lineare tra due punti significa ottenere, per differenti valori di t, punti medi compresi tra questi due punti, dove 0 < t < 1
+					<br> <br>
+					<iframe scrolling=no frameborder=0 width=100% height=500 src="assets\sketches\interpolazione lineare\index.html"></iframe>
+					<br> <br>
+				<i>Clicca su Pt per modificarne la posizione</i>
 				</p>
 
 			</div>
@@ -188,8 +194,9 @@
 			<br><br> 
 			Dati quindi due punti P<sub>0</sub> e P<sub>1</sub>, la curva lineare di Bézier è determinata da questi due punti e lʼinterpolazione lineare del segmento che li congiunge.
 			<br><br>
-			<img src="assets\img\Bézier_1_big.gif">
-			<br><br> 
+			<iframe scrolling=no frameborder=0 width=100% height=500 src="assets\sketches\Curva Bézier lineare\index.html"></iframe>
+			<i>Trascina i punti per modificarli. Premi "A" per ripristinare.</i>
+			<br><br><br>
 			La curva è equivalente quindi allʼinterpolazione lineare <br> ed è data da:
 			<br><br>
 			<span style="font-family:'Times New Roman', Times, serif">
@@ -216,8 +223,9 @@
 			Dati tre punti P<sub>0</sub>, P<sub>1</sub> e P<sub>2</sub>, una curva quadratica di Bézier è lʼinterpolazione di due punti,
 			presi dalla curva di Bézier lineare tra P<sub>0</sub> e P<sub>1</sub> e la curva di Bézier lineare tra P<sub>1</sub> e P<sub>2</sub>
 			<br><br>
-			<img src="assets\img\Bézier_2_big.gif">
-			<br><br> 
+			<iframe scrolling=no frameborder=0 width=100% height=500 src="assets\sketches\Curva Bézier quadratica\index.html"></iframe>
+			<i>Trascina i punti per modificarli. Premi "A" per ripristinare.</i>
+			<br><br><br>
 			Dunque, la Bézier Quadratica è ottenuta da:
 			<br><br>
 			<span style="font-family:'Times New Roman', Times, serif">
@@ -255,8 +263,9 @@
 			Dati quattro punti P<sub>0</sub>, P<sub>1</sub> e P<sub>2</sub>, una curva cubica di Bézier è l'interpolazione di due punti,
 			presi dalla curva di Bézier quadratica tra P<sub>0</sub>, P<sub>1</sub> e P<sub>2</sub> e la curva di Bezier quadratica tra P<sub>1</sub>, P<sub>2</sub> e P<sub>3</sub>
 			<br><br>
-			<img src="assets\img\Bézier_3_big.gif">
-			<br><br> 
+			<iframe scrolling=no frameborder=0 width=100% height=500 src="assets\sketches\Curva Bézier cubica\index.html"></iframe>
+			<i>Trascina i punti per modificarli. Premi "A" per ripristinare.</i>
+			<br><br><br>
 			Dunque, la Bézier Cubica è ottenuta da:
 			<br><br> 
 			<span style="font-family:'Times New Roman', Times, serif"> 
@@ -278,8 +287,11 @@
 			Analogamente, per 4 Punti P<sub>0</sub>, P1, P2, P3 si ha la seguente formula:
 			<br><br> 
 			<span style="font-family:'Times New Roman', Times, serif"> 
-			C(t) = (1-t³)P<sub>0</sub> + 3t(1-t)2P<sub>1</sub> + 3t² (1-t)P<sub>2</sub> + t³P<sub>3</sub><br>
+			C(t) = (1-t³)P<sub>0</sub> + 3t(1-t)2P<sub>1</sub> + 3t² (1-t)P<sub>2</sub> + t³P<sub>3</sub><br><br>
 		</span>
+		<iframe scrolling=no frameborder=0 width=100% height=500 src="assets\sketches\Algoritmo di De Casteljau"></iframe>
+		
+		<i>Click per aggiungere punti di controllo. Trascina i punti per modificarli. Premi "A" per ripristinare.</i>
 			<!-- La curva cubica di bezier e un interpolazione tra due curve quadratiche  -->
 	</p>
 	</div>
