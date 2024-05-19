@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Titolo Pagina</title>
 	<meta name="author"      content="Margot Nocci">
-	<meta name="description" content="Descrizione">
+	<meta name="description" content="Matematica per il Design, ricerca sulle Curve di Bézier, AA2023-24">
 	<meta name="viewport"    content="width=device-width, initial-scale=1">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,12 +53,12 @@
 				<p>
 					Le Curve di Bézier sono delle curve fondamentali, spesso utilizzate in computer grafica e processazione di immagini, modellazione, ed editor di grafica vettoriale.
 					<br>
-					Come nel caso dei caratteri, quali vengono descritti tramite curve di Bezier, ad esempio i caratteri <a href="https://www.truetype-typography.com/ttoutln.htm" >TrueType</a> utilizzano curve di Bézier quadratiche che sono matematicamente più semplici e veloci da elaborare rispetto a quelle cubiche, ma richiedono più punti per essere descritte. 
+					Come nel caso dei caratteri, quali vengono descritti tramite curve di Bezier, ad esempio i caratteri <a href="https://www.geogebra.org/m/fWHQS29j" >TrueType</a> utilizzano curve di Bézier quadratiche che sono matematicamente più semplici e veloci da elaborare rispetto a quelle cubiche, ma richiedono più punti per essere descritte. 
 					<br>
 					Vengono molto utilizzate anche nell’industria dei videogiochi, in particolar modo per generare strade con curvature dolci nei racing-game, oppure percorsi curvilinei in puzzle-game, o ancora per generare dei fiumi, etc…
 
 				</p>
-				<img style="width:400px" src="assets\img\Designletter A Bezier.gif"></iframe>
+				<!-- <img style="width:400px" src="assets\img\Designletter A Bezier.gif"></iframe> -->
 			</div>
 		</section>
 
@@ -68,14 +68,14 @@
 			<h4 class="titolo-sezione">Cos'è una curva?</h4>
 			<div class="contenuto-sezione">
 				<p>
-					E’ un oggetto unidimensionale e continuo<br>
+					È un oggetto unidimensionale e continuo<br>
 					che viene rappresentato con
 					delle funzioni continue e differenziabili<br>
 					<br>Esempi: Retta, parabola o circonferenza
 					<br>
 
 				</p>
-				<img style="width:400px" src="assets\img\pligono di controllo.png">
+				<img style="width:450px" src="assets\img\pligono di controllo.png">
 			</div>
 		</section>
 
@@ -118,26 +118,26 @@
 					Sembra complicato ma si tratta semplicemente di "scegliere un punto tra due punti". <br> 
 					Per ottenere qualsiasi punto in questi segmenti utilizziamo una funzione fisica lineare che equivale ad un interpolazione lineare con t che varia da 0 a 1, ciò significa che l’influenza di ciascun punto dipende da t.
 					<br> <br>
-					Il t nella funzione di una curva di Bézier lineare può essere pensato come la descrizione del tragitto di B(t) da P<sub>0</sub> a P<sub>1</sub>. Per esempio quando t=0.25, B(t) è un quarto del percorso da P<sub>0</sub> a P<sub>1</sub>. 
+					Il t nella funzione di una curva di Bézier lineare può essere pensato come la descrizione del tragitto di B(t) da P<sub>0</sub> a P<sub>1</sub>.
+					<br>
+					Per esempio quando t=0.25, B(t) è un quarto del percorso da P<sub>0</sub> a P<sub>1</sub>. 
+					<br>
 					Al variare di t da 0 a 1, B(t) descrive l'intero segmento compreso tra P<sub>0</sub> e P<sub>1</sub>. 
+					<br>
+					Fare un’interpolazione lineare tra due punti significa quindi, ottenere per differenti valori di t, punti medi compresi tra questi due punti.
 					<br> <br>
-					In questo caso, per ottenere il punto interpolato aggiungiamo la tesima frazione di distanza che intercorre tra questi due punti a P, quindi:
-					<br><br>
+					
 						<li>Per t = 0,&ensp;&emsp;&ensp;&ensp;&ensp; P = P<sub>0</sub> (il punto si troverà all’inizio).</li><br>
 						<li>Per t = 1,&ensp;&emsp;&ensp;&ensp;&ensp; P = P<sub>1</sub> (il punto si troverà alla fine).</li><br>
 						<li>Per t = 0.5,&ensp;&emsp; P = Punto Intermedio tra P<sub>0</sub> e P<sub>1</sub>.</li>
-					<br><br>
-						<li>per ogni valore compreso tra 0 e 1 otterremo un punto nel segmento linea che collega p0 e p1
 					<br> <br>
 					La formula per calcolare un punto interpolato P, tra P<sub>0</sub> e P<sub>1</sub> può essere scritta come:<br><br>
 				<span style="font-family:'Times New Roman', Times, serif">
 					P = P<sub>0</sub> + t(P<sub>1</sub> – P<sub>0</sub>)   &ensp;&emsp;&emsp; 0 < t < 1 <br><br>
 				</span>
-					Fare Interpolazione Lineare tra due punti significa ottenere, per differenti valori di t, punti medi compresi tra questi due punti, dove 0 < t < 1
-					<br> <br>
 					<iframe scrolling=no frameborder=0 width=100% height=500 src="assets\sketches\interpolazione lineare\index.html"></iframe>
 					<br> <br>
-				<i>Clicca su Pt per modificarne la posizione</i>
+				<i>Click sul punto rosso per modificarne la posizione.</i>
 				</p>
 
 			</div>
@@ -181,7 +181,7 @@
 			con k = 1,2,...., η <br>
 			i = 0,1,..., n-k  -->
 			<br><br>
-			Lʼalgoritmo di de casteljau è in realtà una generalizzazione dell’interpolazione di linee semplici.
+			Lʼalgoritmo di De Casteljau è in realtà una generalizzazione dell’interpolazione di linee semplici.
 			<br><br> 
 		</p>
 	</div>
@@ -189,7 +189,7 @@
 	<h4 class="titolo-sezione">Curve di bezier lineari</h4>
 	<div class="contenuto-sezione">
 		<p>
-			Le Curve di Bézier Lineari sono caratterizzate da due punti di
+			Le Curve di Bézier lineari sono caratterizzate da due punti di
 			controllo.
 			<br><br> 
 			Dati quindi due punti P<sub>0</sub> e P<sub>1</sub>, la curva lineare di Bézier è determinata da questi due punti e lʼinterpolazione lineare del segmento che li congiunge.
@@ -200,18 +200,18 @@
 			La curva è equivalente quindi allʼinterpolazione lineare <br> ed è data da:
 			<br><br>
 			<span style="font-family:'Times New Roman', Times, serif">
-			y P<sub>0</sub>, P<sub>1</sub> = P<sub>0</sub> + t (P<sub>1</sub> – P<sub>0</sub>) = (1-t) P<sub>0</sub> + t P<sub>1</sub>      
-			<br>0 < t < 1
+			y P<sub>0</sub>, P<sub>1</sub> = P<sub>0</sub> + t (P<sub>1</sub> – P<sub>0</sub>) = (1-t) P<sub>0</sub> + t P<sub>1</sub>&ensp;&emsp;&ensp;&ensp;&ensp;0 < t < 1
 			<br><br> 
 		</span>
-			Applicando una sostituzione si ha:
+			<!-- Applicando una sostituzione si ha:
 			<br><br> 
 			<span style="font-family:'Times New Roman', Times, serif">
 				Q(t) = (1-t) [ (1-t)P<sub>0</sub> + tP<sub>1</sub> ] + t [ (1-t)P<sub>1</sub> + tP<sub>2</sub> ] <br> 
 				Q(t) = (1-t²)P<sub>0</sub> + (1-t)tP<sub>1</sub> + t(1-t)P<sub>1</sub> + t²P<sub>2</sub> <br> 
 				Q(t) = (1-t²)P<sub>0</sub> + 2t(1-t)P<sub>1</sub> + t²P<sub>2</sub>
-				<br><br> </span>  
+				<br><br> </span>   -->
 			Essa si muove di moto rettilineo uniforme.
+			<br><br>
 		</p>
 	</div>
 	<h4 class="titolo-sezione">Curve di Bézier quadratiche</h4>
@@ -229,27 +229,27 @@
 			Dunque, la Bézier Quadratica è ottenuta da:
 			<br><br>
 			<span style="font-family:'Times New Roman', Times, serif">
-			yP<sub>0</sub>,P<sub>1</sub>,P<sub>2</sub> = (1-t)²P<sub>0</sub> + 2t(1-t)P<sub>1</sub> + t²P<sub>2</sub>
+			yP<sub>0</sub>,P<sub>1</sub>,P<sub>2</sub> = (1-t)²P<sub>0</sub> + 2t(1-t)P<sub>1</sub> + t²P<sub>2</sub>&ensp;&emsp;&ensp;&ensp;&ensp;0 < t < 1
 		</span>
 			<br><br> 
 			Di seguito la costruzione:
 			<br><br> 
 			<span style="font-family:'Times New Roman', Times, serif"> 
-			B(t) = γP<sub>0</sub>,P<sub>1</sub>, = (1-t)P<sub>0</sub> + tP<sub>1</sub><br> 
+			B(t) = yP<sub>0</sub>,P<sub>1</sub>, = (1-t)P<sub>0</sub> + tP<sub>1</sub><br> 
 			C(t) = yP<sub>1</sub>,P<sub>2</sub>, = (1-t)P<sub>1</sub> + tP<sub>2</sub><br><br> 
 			D(t) = yP<sub>0</sub>,P<sub>1</sub>,P<sub>2</sub> = (1 - t)B + tC
 		</span>
 			<br><br> 
-			Applicando una sostituzione si ha:<br>
+			<!-- Applicando una sostituzione si ha:<br>
 			<span style="font-family:'Times New Roman', Times, serif"> 
 			Q(t) = (1-t) [ (1-t)P<sub>0</sub> + tP<sub>1</sub> ] + t [ (1-t)P<sub>1</sub> + tP<sub>2</sub> ]<br>
 			Q(t) = (1-t²)P<sub>0</sub> + (1-t)tP<sub>1</sub> + t(1-t)P<sub>1</sub> + t²P<sub>2</sub><br>
 			Q(t) = (1-t²)P<sub>0</sub> + 2t(1-t)P<sub>1</sub> + t²P<sub>2</sub>
-			<br><br>
-			Q(t) = (1-t) [ (1-t)P<sub>0</sub> + tP<sub>1</sub> ] + t [ (1-t)P<sub>1</sub> + tP<sub>2</sub> ]<br>
+			<br><br> -->
+			<!-- Q(t) = (1-t) [ (1-t)P<sub>0</sub> + tP<sub>1</sub> ] + t [ (1-t)P<sub>1</sub> + tP<sub>2</sub> ]<br>
 			Q(t) = P<sub>0</sub>(1-t)² + P<sub>1</sub>t(1-t) + P<sub>1</sub>t(1-t) + P<sub>2</sub>t²<br>
 			Q(t) = P<sub>0</sub>(1-t)² + 2P<sub>1</sub>(t-t²) + P<sub>2</sub>t²<br>
-			Q(t) = P<sub>0</sub>(1-t)² + P<sub>1</sub> 2t(1-t) + P<sub>2</sub>t²
+			Q(t) = P<sub>0</sub>(1-t)² + P<sub>1</sub> 2t(1-t) + P<sub>2</sub>t² -->
 		</span>
 		</p>
 	</div>
@@ -269,27 +269,32 @@
 			Dunque, la Bézier Cubica è ottenuta da:
 			<br><br> 
 			<span style="font-family:'Times New Roman', Times, serif"> 
-			yP<sub>0</sub>,P<sub>1</sub>,P<sub>2</sub>,P<sub>3</sub> = (1 – t³)P<sub>0</sub> + 3t(1 – t)2P<sub>1</sub> + 3t²(1 – t)P<sub>2</sub> + t³P<sub>3</sub>
+			yP<sub>0</sub>,P<sub>1</sub>,P<sub>2</sub>,P<sub>3</sub> = (1 – t³)P<sub>0</sub> + 3t(1 – t)2P<sub>1</sub> + 3t²(1 – t)P<sub>2</sub> + t³P<sub>3</sub>&ensp;&emsp;&ensp;&ensp;&ensp;0 < t < 1
 		</span>
 			<br><br> 
 			Di seguito la costruzione :
 			<span style="font-family:'Times New Roman', Times, serif"> 
 			<br><br> 
-			B(t) = yP<sub>0</sub>,P<sub>1</sub> = (1-t)P<sub>0</sub> + tP<sub>1</sub>
-			C(t) = yP<sub>1</sub>,P<sub>2</sub> = (1-t)P<sub>1</sub> + tP<sub>2</sub>
-			D(t) = yP<sub>0</sub>,P<sub>1</sub>,P<sub>2</sub> = (1 - t)B + tC
+			B(t) = yP<sub>0</sub>,P<sub>1</sub> = (1-t)P<sub>0</sub> + tP<sub>1</sub> <br>
+			C(t) = yP<sub>1</sub>,P<sub>2</sub> = (1-t)P<sub>1</sub> + tP<sub>2</sub> <br><br>
+			D(t) = yP<sub>0</sub>,P<sub>1</sub>,P<sub>2</sub> = (1 - t)B + tC <br>
 			<br><br>
-			B’(t) = yP<sub>0</sub>,P<sub>1</sub> = (1-t)P<sub>1</sub> + tP<sub>2</sub>
-			C’(t) = yP<sub>1</sub>,P<sub>2</sub> = (1-t)P<sub>2</sub> + tP<sub>3</sub>
-			D’(t) = yP<sub>0</sub>,P<sub>1</sub>,P<sub>2</sub> = (1 - t)B’ + tC’
-			<br><br> 
+			B'(t) = yP<sub>1</sub>,P<sub>2</sub> = (1-t)P<sub>1</sub> + tP<sub>2</sub> <br>
+			C'(t) = yP<sub>2</sub>,P<sub>3</sub> = (1-t)P<sub>2</sub> + tP<sub>3</sub> <br><br>
+			D'(t) = yP<sub>1</sub>,P<sub>2</sub>,P<sub>3</sub> = (1 - t)B' + tC'
+			<br><br><br>
+			C''(t) = yP<sub>0</sub>,P<sub>1</sub>,P<sub>2</sub>,P<sub>3</sub> = (1 - t)D + tD' <br><br>
 		</span>
-			Analogamente, per 4 Punti P<sub>0</sub>, P1, P2, P3 si ha la seguente formula:
+			<!-- Analogamente, per 4 Punti P<sub>0</sub>, P1, P2, P3 si ha la seguente formula:
 			<br><br> 
 			<span style="font-family:'Times New Roman', Times, serif"> 
-			C(t) = (1-t³)P<sub>0</sub> + 3t(1-t)2P<sub>1</sub> + 3t² (1-t)P<sub>2</sub> + t³P<sub>3</sub><br><br>
+			C(t) = (1-t³)P<sub>0</sub> + 3t(1-t)2P<sub>1</sub> + 3t² (1-t)P<sub>2</sub> + t³P<sub>3</sub><br><br> -->
 		</span>
-		<iframe scrolling=no frameborder=0 width=100% height=500 src="assets\sketches\Algoritmo di De Casteljau"></iframe>
+	</p>
+</div>
+		<h4 class="titolo-sezione">Disegna con lʼalgoritmo</h4>
+	<div class="contenuto-sezione">
+		<p><iframe scrolling=no frameborder=0 width=100% height=500 src="assets\sketches\Algoritmo di De Casteljau"></iframe>
 		
 		<i>Click per aggiungere punti di controllo. Trascina i punti per modificarli. Premi "A" per ripristinare.</i>
 			<!-- La curva cubica di bezier e un interpolazione tra due curve quadratiche  -->
@@ -363,9 +368,9 @@
 			C = (P<sub>0</sub>)(1-t)³ + (P<sub>1</sub>)3t(1-t)² + (P<sub>2</sub>)3t²(1-t) + (P<sub>3</sub>)t³
 		</span>
 			<br> <br>
-			In questo modo possiamo calcolare una curva di qualsiasi grado<br>
-			Per una curva di 4. grado dovremmo calcolare i polinomi di Bernstein i quali saranno 5 come i punti della curva, che dovranno poi essere inseriti all’interno della formula. 
-			<br> <br>
+			In questo modo possiamo calcolare una curva di qualsiasi grado<br><br>
+			<!-- Per una curva di 4. grado dovremmo calcolare i polinomi di Bernstein i quali saranno 5 come i punti della curva, che dovranno poi essere inseriti all’interno della formula. 
+			<br> <br> -->
 		</p>
 	</div>
 	<h4 class="titolo-sezione">Formula di Bernstein</h4>
@@ -412,26 +417,25 @@
 		<h4 class="titolo-sezione">Sitografia</h4>
 		<div class="contenuto-sezione">
 			<ul>
-					<li>La curva di Bézier è sempre interna alla poligonale avente come vertici i punti di controllo 𝑃𝑘. Questa proprietà è conseguenza del fatto che i polinomi di Bernstein sono positivi nell’intervallo [0, 1] 
-							<!-- La curva è contenuta nel guscio convesso (convex hull) del poligono di controllo. -->
-						<li>Phasellus et orci elit</li>
-						<li>Maecenas vehicula elit et lacus accumsan consequat</li>
-						<li>Nam consectetur lacus ante</li>
-						<li>Vestibulum et massa dolor</li>
-						<li>Aenean condimentum blandit eros non dapibus</li>
-						<li>Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris</li>
-						<li>Phasellus sit amet nulla eu tellus dictum cursus</li>
-						<li>Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam</li>
-						<a href="http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/apps/landingmoon/applet.html">
+						<li><a href="http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/apps/bezierpong/Teoria.html">http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/apps/bezierpong/Teoria.html</a></li>
+						<li><a href="http://www.it.hiof.no/~borres/j3d/math/bezier/p-bezier.html">http://www.it.hiof.no/~borres/j3d/math/bezier/p-bezier.html</a></li>
+						<li><a href="https://www.geogebra.org/m/cFZURTVt ">https://www.geogebra.org/m/cFZURTVt</a></li>
+						<li><a href="https://www.truetype-typography.com/ttoutln.htm">https://www.truetype-typography.com/ttoutln.htm</a></li>
 
-							<img style="width:500px" src="assets\img\Screenshot 2024-05-17 094925.png" alt="landingmoon" />
-							
-							</a>
-						<a href="https://bezier.method.ac/">
-
-							<img style="width:500px" src="assets\img\Screenshot 2024-05-17 100229.png" alt="landingmoon" />
-								
-							</a>
+				</ul>
+			</div>		
+		<h4 class="titolo-sezione">Video</h4>
+		<div class="contenuto-sezione">
+			<ul>
+						<li><a href="https://youtu.be/dF1rR2Px8CA?feature=shared">https://youtu.be/dF1rR2Px8CA?feature=shared</a></li>
+						<li><a href="https://youtu.be/YATikPP2q70?feature=shared">https://youtu.be/YATikPP2q70?feature=shared</a></li>
+					</ul>
+			</div>
+		<h4 class="titolo-sezione">Applicazioni delle curve</h4>
+		<div class="contenuto-sezione">
+			<ul>
+						<li><a href="http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/apps/landingmoon/applet.html">http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/apps/landingmoon/applet.html</a></li>
+						<li><a href="https://bezier.method.ac/">https://bezier.method.ac/</a></li>
 					</ul>
 		</div>
 		</section>
