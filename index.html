@@ -28,7 +28,6 @@
 		<section class="filetto">
 			<h4 class="titolo-sezione">Storia</h4>
 			<div class="contenuto-sezione">
-				<p class="SIZECARATTERE"> 
 					<b>1911 - Polinomi di Bernstein</b>
 					<br>
 					I 	<a href="https://it.wikipedia.org/wiki/Polinomio_di_Bernstein" >Polinomi di Bernstein</a> sono la base matematica secondo cui vengono costruite le curve di Bézier,
@@ -41,9 +40,6 @@
 					<br>
 					<!-- <img style="width:100px" src="assets\img\Img-Pierre_Bezier.jpg"></iframe> -->
 					<a href="https://it.wikipedia.org/wiki/Pierre_B%C3%A9zier" >Pierre Bézier</a>, ingegnere francese della Renault, formalizza l’espressione matematica delle curve costruite tramite l’algoritmo di de Casteljau usandole per disegnare le carrozzerie delle automobili.
-					
-					
-				</p>
 			</div>
 		</section>
 
@@ -77,7 +73,7 @@
 					<br>
 
 				</p>
-				<img style="width:450px" src="assets\img\pligono di controllo.png">
+				<img style="width:550px" src="assets\img\pligono di controllo.png">
 			</div>
 		</section>
 
@@ -95,15 +91,16 @@
 					<br><br>
 							Una Curva di Bezier Lineare di 1. grado contiene due punti di controllo, viene quindi definita con n = 2.
 							<br><br>
-							<img src="assets/img/lineare.png ">
+							<img  style="width:450px" src="assets\img\grado 1_Tavola disegno 1_Tavola disegno 1_Tavola disegno 1.png">
 							<br><br>
 							Una Curva di Bézier Quadratica di 2. grado contiene tre punti di controllo, viene quindi definita con n = 3.
 							<br><br>
-							<img src="assets\img\quadratica.png">
+							<img style="width:450px" src="assets\img\grado 2-02-02.png">
 							<br><br>
-							Una Curva di Bézier Cubica di 3. grado contiene quattro punti di controllo, viene quindi definita con n = 4. <br> E così via …
+							Una Curva di Bézier Cubica di 3. grado contiene quattro punti di controllo, viene quindi definita con n = 4.
 							<br><br>
-							<img src="assets\img\cubica vera.png">
+							<img style="width:530px" src="assets\img\grado 3-03-03.png">
+							<br> <br> E così via …
 				
 				</p>
 
@@ -187,7 +184,9 @@
 			i = 0,1,..., n-k  -->
 			<br><br>
 			Lʼalgoritmo di De Casteljau è in realtà una generalizzazione dell’interpolazione di linee semplici.
-			<br><br> 
+			<br><br><br>
+			<img style="width: 550px" src="assets\img\costruzione de casteljau.png"> 
+			<br><br><br>
 		</p>
 	</div>
 
@@ -231,7 +230,7 @@
 			<iframe scrolling=no frameborder=0 width=100% height=600 src="assets\sketches\Curva Bézier quadratica\index.html"></iframe>
 			<i>Trascina i punti per modificarli. Premi "A" per ripristinare.</i>
 			<br><br>
-			Dunque, la Bézier Quadratica è ottenuta da:
+			Dunque, la Bézier quadratica è ottenuta da:
 			<br><br>
 			<span style="font-family:'Times New Roman', Times, serif">
 			yP<sub>0</sub>,P<sub>1</sub>,P<sub>2</sub> = (1-t)²P<sub>0</sub> + 2t(1-t)P<sub>1</sub> + t²P<sub>2</sub>&ensp;&emsp;&ensp;&ensp;&ensp;0 < t < 1
@@ -265,13 +264,13 @@
 			Le curve di Bézier cubiche sono caratterizzate da
 			quattro punti di controllo.
 			<br><br> 
-			Dati quattro punti P<sub>0</sub>, P<sub>1</sub> e P<sub>2</sub>, una curva cubica di Bézier è l'interpolazione di due punti,
-			presi dalla curva di Bézier quadratica tra P<sub>0</sub>, P<sub>1</sub> e P<sub>2</sub> e la curva di Bezier quadratica tra P<sub>1</sub>, P<sub>2</sub> e P<sub>3</sub>
+			Dati quattro punti P<sub>0</sub>, P<sub>1</sub>, P<sub>2</sub> e P<sub>3</sub>, una curva cubica di Bézier è l'interpolazione di tre punti,
+			presi dalla curva di Bézier quadratica tra P<sub>0</sub>, P<sub>1</sub> e P<sub>2</sub> e la curva di Bézier quadratica tra P<sub>1</sub>, P<sub>2</sub> e P<sub>3</sub>
 			<br><br>
 			<iframe scrolling=no frameborder=0 width=100% height=600 src="assets\sketches\Curva Bézier cubica\index.html"></iframe>
 			<i>Trascina i punti per modificarli. Premi "A" per ripristinare.</i>
 			<br><br> 
-			Dunque, la Bézier Cubica è ottenuta da:
+			Dunque, la Bézier cubica è ottenuta da:
 			<br><br> 
 			<span style="font-family:'Times New Roman', Times, serif"> 
 			yP<sub>0</sub>,P<sub>1</sub>,P<sub>2</sub>,P<sub>3</sub> = (1 – t³)P<sub>0</sub> + 3t(1 – t)2P<sub>1</sub> + 3t²(1 – t)P<sub>2</sub> + t³P<sub>3</sub>&ensp;&emsp;&ensp;&ensp;&ensp;0 < t < 1
@@ -406,42 +405,37 @@
 		<section class="filetto">
 			<h4 class="titolo-sezione">Osservazioni</h4>
 			<div class="contenuto-sezione">
-					<li>La curva di Bézier è sempre interna alla poligonale avente come vertici i punti di controllo 𝑃𝑘. Questa proprietà è conseguenza del fatto che i polinomi di Bernstein sono positivi nell’intervallo [0, 1] 
+				<ul>
+					<li>La curva di Bézier è sempre interna alla poligonale avente come vertici i punti di controllo. Questa proprietà è conseguenza del fatto che i polinomi di Bernstein sono positivi nell’intervallo [0, 1] 
 					<br><br>	<!-- La curva è contenuta nel guscio convesso (convex hull) del poligono di controllo. -->
-					<li>Inizia dal primo punto di controllo, termina all'ultimo, ma non attraversa tutti gli altri punti di controllo. Gli altri punti di controllo sono chiamati punti di controllo fuori curva. E questi punti agiscono come ' pesi' , che dirigono il flusso della curva.</li>
+					<li>Inizia dal primo punto di controllo, termina all'ultimo, ma non attraversa tutti gli altri punti di controllo. Gli altri punti di controllo sono chiamati punti di controllo fuori curva. E questi punti agiscono come 'pesi' , che dirigono il flusso della curva.</li>
 					<br>
 					<li>Per trasformare la curva, basta trasformare il poligono di controllo. </li>
 					<br>
 					<li>Se si modifica un solo punto del poligono di controllo, cambia tutta la forma della curva.</li>
-					<br>
-					<li>Il primo e l’ultimo punto di controllo coincidono sempre con gli estremi della curva, mentre i punti intermedi generalmente non giacciono all’interno di questa.</li>
+				</ul>
 			</div>
 		</section>
 <!-- --------------------------------------------------------------------- -->
 		<section class="filetto">
 		<h4 class="titolo-sezione">Sitografia</h4>
 		<div class="contenuto-sezione">
-			<ul>
+
 						<li><a href="http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/apps/bezierpong/Teoria.html">http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/apps/bezierpong/Teoria.html</a></li>
 						<li><a href="http://www.it.hiof.no/~borres/j3d/math/bezier/p-bezier.html">http://www.it.hiof.no/~borres/j3d/math/bezier/p-bezier.html</a></li>
 						<li><a href="https://www.geogebra.org/m/cFZURTVt ">https://www.geogebra.org/m/cFZURTVt</a></li>
-						<li><a href="https://www.truetype-typography.com/ttoutln.htm">https://www.truetype-typography.com/ttoutln.htm</a></li>
-
-				</ul>
-			</div>		
+						<li><a href="https://www.truetype-typography.com/ttoutln.htm">https://www.truetype-typography.com/ttoutln.htm</a></li> <br><br>
+			
+					</div>		
 		<h4 class="titolo-sezione">Video</h4>
 		<div class="contenuto-sezione">
-			<ul>
 						<li><a href="https://youtu.be/dF1rR2Px8CA?feature=shared">https://youtu.be/dF1rR2Px8CA?feature=shared</a></li>
-						<li><a href="https://youtu.be/YATikPP2q70?feature=shared">https://youtu.be/YATikPP2q70?feature=shared</a></li>
-					</ul>
+						<li><a href="https://youtu.be/YATikPP2q70?feature=shared">https://youtu.be/YATikPP2q70?feature=shared</a></li><br><br>
 			</div>
 		<h4 class="titolo-sezione">Applicazioni delle curve</h4>
 		<div class="contenuto-sezione">
-			<ul>
 						<li><a href="http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/apps/landingmoon/applet.html">http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/apps/landingmoon/applet.html</a></li>
 						<li><a href="https://bezier.method.ac/">https://bezier.method.ac/</a></li>
-					</ul>
 		</div>
 		</section>
 	</main>
