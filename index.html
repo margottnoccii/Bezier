@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Titolo Pagina</title>
 	<meta name="author"      content="Margot Nocci">
-	<meta name="description" content="Matematica per il Design, ricerca sulle Curve di Bézier, AA2023-24">
+	<meta name="description" content="Matematica per il Design, ricerca sulle Curve di Bézier, AA2023-24, ISIAU">
 	<meta name="viewport"    content="width=device-width, initial-scale=1">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,17 +28,19 @@
 		<section class="filetto">
 			<h4 class="titolo-sezione">Storia</h4>
 			<div class="contenuto-sezione">
-				<p>
-					<b>1911 - Polinomi di Bernstein</b> <br> I Polinomi di Bernstein sono la base matematica secondo cui vengono costruite le curve di Bézier,
+				<p class="SIZECARATTERE"> 
+					<b>1911 - Polinomi di Bernstein</b>
+					<br>
+					I 	<a href="https://it.wikipedia.org/wiki/Polinomio_di_Bernstein" >Polinomi di Bernstein</a> sono la base matematica secondo cui vengono costruite le curve di Bézier,
 					tuttavia questi polinomi non vennero mai applicati fino agli anni 60'.<br>
 					<br><b>1959 - Paul de Casteljau</b>
 					<br>
-					<img style="width:100px" src="assets\img\images.jpeg">
+					<!-- <img style="width:100px" src="assets\img\images.jpeg"> -->
+					<a href="https://it.wikipedia.org/wiki/Paul_de_Casteljau" >Paul de Casteljau</a>, fisico, matematico e ingegnere della Citroen, realizza un algoritmo per costruire curve e superfici nello spazio.<br>
+					<br><b>1962 - Pierre Bézier</b>
 					<br>
-					Paul de Casteljau, fisico, matematico e ingegnere della Citroen, realizza un algoritmo per costruire curve e superfici nello spazio.<br>
-					<br><b>1962 - Pierre Bézier</b><br>
-					<img style="width:100px" src="assets\img\Img-Pierre_Bezier.jpg"></iframe>
-					<br> Pierre Bézier, ingegnere francese della Renault, formalizza l’espressione matematica delle curve costruite tramite l’algoritmo di de Casteljau usandole per disegnare le carrozzerie delle automobili.
+					<!-- <img style="width:100px" src="assets\img\Img-Pierre_Bezier.jpg"></iframe> -->
+					<a href="https://it.wikipedia.org/wiki/Pierre_B%C3%A9zier" >Pierre Bézier</a>, ingegnere francese della Renault, formalizza l’espressione matematica delle curve costruite tramite l’algoritmo di de Casteljau usandole per disegnare le carrozzerie delle automobili.
 					
 					
 				</p>
@@ -68,9 +70,9 @@
 			<h4 class="titolo-sezione">Cos'è una curva?</h4>
 			<div class="contenuto-sezione">
 				<p>
-					È un oggetto unidimensionale e continuo<br>
+					È un oggetto unidimensionale e continuo
 					che viene rappresentato con
-					delle funzioni continue e differenziabili<br>
+					delle funzioni continue e differenziabili.<br>
 					<br>Esempi: Retta, parabola o circonferenza
 					<br>
 
@@ -86,9 +88,9 @@
 			<div class="contenuto-sezione">
 				<p>
 					Una curva di Bézier è definita da un poligono di controllo
-					<br> formato da un set di vertici detti "Punti di controllo"
-					<br> che assumono un valore da P<sub>0</sub> fino a P<sub>n</sub>,
-					<br>dove con "n" se ne intende l'ordine.<br>
+					formato da un set di vertici detti "Punti di controllo"
+					che assumono un valore da P<sub>0</sub> fino a P<sub>n</sub>,
+					dove con "n" se ne intende l'ordine.<br>
 					<br>Ad ogni curva viene attribuito un proprio grado il quale è dato dal (numero di vertici -1) del poligono di controllo.
 					<br><br>
 							Una Curva di Bezier Lineare di 1. grado contiene due punti di controllo, viene quindi definita con n = 2.
@@ -114,17 +116,21 @@
 			<h4 class="titolo-sezione">Interpolazione lineare</h4>
 			<div class="contenuto-sezione">
 				<p>
-					La funzione di Bezier, utilizza come concetto base l’interpolazione lineare. <br> 
-					Sembra complicato ma si tratta semplicemente di "scegliere un punto tra due punti". <br> 
-					Per ottenere qualsiasi punto in questi segmenti utilizziamo una funzione fisica lineare che equivale ad un interpolazione lineare con t che varia da 0 a 1, ciò significa che l’influenza di ciascun punto dipende da t.
+					La funzione di Bezier, utilizza come concetto base l’interpolazione lineare.
+					Sembra complicato ma si tratta semplicemente di "scegliere un punto tra due punti".
+					Per ottenere qualsiasi punto in questi segmenti utilizziamo una funzione fisica lineare
+					che equivale ad un interpolazione lineare con t che varia da 0 a 1,
+					ciò significa che l’influenza di ciascun punto dipende da t.
 					<br> <br>
-					Il t nella funzione di una curva di Bézier lineare può essere pensato come la descrizione del tragitto di B(t) da P<sub>0</sub> a P<sub>1</sub>.
+					Il t nella funzione di una curva di Bézier lineare può essere pensato come la descrizione del tragitto di
+					B(t) da P<sub>0</sub> a P<sub>1</sub>.
 					<br>
 					Per esempio quando t=0.25, B(t) è un quarto del percorso da P<sub>0</sub> a P<sub>1</sub>. 
 					<br>
 					Al variare di t da 0 a 1, B(t) descrive l'intero segmento compreso tra P<sub>0</sub> e P<sub>1</sub>. 
 					<br>
-					Fare un’interpolazione lineare tra due punti significa quindi, ottenere per differenti valori di t, punti medi compresi tra questi due punti.
+					Fare un’interpolazione lineare tra due punti significa quindi, ottenere per differenti valori di t,
+					punti medi compresi tra questi due punti.
 					<br> <br>
 					
 						<li>Per t = 0,&ensp;&emsp;&ensp;&ensp;&ensp; P = P<sub>0</sub> (il punto si troverà all’inizio).</li><br>
@@ -135,8 +141,7 @@
 				<span style="font-family:'Times New Roman', Times, serif">
 					P = P<sub>0</sub> + t(P<sub>1</sub> – P<sub>0</sub>)   &ensp;&emsp;&emsp; 0 < t < 1 <br><br>
 				</span>
-					<iframe scrolling=no frameborder=0 width=100% height=500 src="assets\sketches\interpolazione lineare\index.html"></iframe>
-					<br> <br>
+					<iframe scrolling=no frameborder=0 width=100% height=600 src="assets\sketches\interpolazione lineare\index.html"></iframe>
 				<i>Click sul punto rosso per modificarne la posizione.</i>
 				</p>
 
@@ -153,7 +158,7 @@
 			A questo problema hanno lavorato 2 matematici: Bézier e Casteljau.
 		</p>
 		<br> <br>
-		<img style="width:300px" src="assets\img\mappa.png">
+		<img style="width:350px" src="assets\img\mappa.png">
 	</div>
 </section>
 
@@ -194,9 +199,9 @@
 			<br><br> 
 			Dati quindi due punti P<sub>0</sub> e P<sub>1</sub>, la curva lineare di Bézier è determinata da questi due punti e lʼinterpolazione lineare del segmento che li congiunge.
 			<br><br>
-			<iframe scrolling=no frameborder=0 width=100% height=500 src="assets\sketches\Curva Bézier lineare\index.html"></iframe>
+			<iframe scrolling=no frameborder=0 width=100% height=600 src="assets\sketches\Curva Bézier lineare\index.html"></iframe>
 			<i>Trascina i punti per modificarli. Premi "A" per ripristinare.</i>
-			<br><br><br>
+			<br><br>
 			La curva è equivalente quindi allʼinterpolazione lineare <br> ed è data da:
 			<br><br>
 			<span style="font-family:'Times New Roman', Times, serif">
@@ -223,9 +228,9 @@
 			Dati tre punti P<sub>0</sub>, P<sub>1</sub> e P<sub>2</sub>, una curva quadratica di Bézier è lʼinterpolazione di due punti,
 			presi dalla curva di Bézier lineare tra P<sub>0</sub> e P<sub>1</sub> e la curva di Bézier lineare tra P<sub>1</sub> e P<sub>2</sub>
 			<br><br>
-			<iframe scrolling=no frameborder=0 width=100% height=500 src="assets\sketches\Curva Bézier quadratica\index.html"></iframe>
+			<iframe scrolling=no frameborder=0 width=100% height=600 src="assets\sketches\Curva Bézier quadratica\index.html"></iframe>
 			<i>Trascina i punti per modificarli. Premi "A" per ripristinare.</i>
-			<br><br><br>
+			<br><br>
 			Dunque, la Bézier Quadratica è ottenuta da:
 			<br><br>
 			<span style="font-family:'Times New Roman', Times, serif">
@@ -263,9 +268,9 @@
 			Dati quattro punti P<sub>0</sub>, P<sub>1</sub> e P<sub>2</sub>, una curva cubica di Bézier è l'interpolazione di due punti,
 			presi dalla curva di Bézier quadratica tra P<sub>0</sub>, P<sub>1</sub> e P<sub>2</sub> e la curva di Bezier quadratica tra P<sub>1</sub>, P<sub>2</sub> e P<sub>3</sub>
 			<br><br>
-			<iframe scrolling=no frameborder=0 width=100% height=500 src="assets\sketches\Curva Bézier cubica\index.html"></iframe>
+			<iframe scrolling=no frameborder=0 width=100% height=600 src="assets\sketches\Curva Bézier cubica\index.html"></iframe>
 			<i>Trascina i punti per modificarli. Premi "A" per ripristinare.</i>
-			<br><br><br>
+			<br><br> 
 			Dunque, la Bézier Cubica è ottenuta da:
 			<br><br> 
 			<span style="font-family:'Times New Roman', Times, serif"> 
@@ -294,7 +299,7 @@
 </div>
 		<h4 class="titolo-sezione">Disegna con lʼalgoritmo</h4>
 	<div class="contenuto-sezione">
-		<p><iframe scrolling=no frameborder=0 width=100% height=500 src="assets\sketches\Algoritmo di De Casteljau"></iframe>
+		<p><iframe scrolling=no frameborder=0 width=100% height=600 src="assets\sketches\Algoritmo di De Casteljau"></iframe>
 		
 		<i>Click per aggiungere punti di controllo. Trascina i punti per modificarli. Premi "A" per ripristinare.</i>
 			<!-- La curva cubica di bezier e un interpolazione tra due curve quadratiche  -->
@@ -306,13 +311,13 @@
 	<h4 class="titolo-sezione">Polinomi di Bernstein</h4>
 	<div class="contenuto-sezione">
 		<p>
-			Prendiamo come esempio la costruzione di una curva quadratica secondo Casteljau
+			Prendiamo come esempio la costruzione di una curva quadratica secondo Casteljau:
 			<br> <br>
 		<span style="font-family:'Times New Roman', Times, serif">
 			yP<sub>0</sub>,P<sub>1</sub>,P<sub>2</sub> = (1-t)²P<sub>0</sub> + 2t(1-t)P<sub>1</sub> + t²P<sub>2</sub>
 		</span>
 			<br> <br>
-			Per arrivare a questa formula Bézier usa i polinomi di Bernstein <br> <br> 
+			Per arrivare a questa formula Bézier usa i polinomi di Bernstein: <br> <br> 
 			<!-- <img src="assets\img\Polinomi Bernstein.jpg"> -->
 		<span style="font-family:'Times New Roman', Times, serif">
 				b<sub>0,0</sub>(t) = 1<br> <br>
@@ -368,7 +373,7 @@
 			C = (P<sub>0</sub>)(1-t)³ + (P<sub>1</sub>)3t(1-t)² + (P<sub>2</sub>)3t²(1-t) + (P<sub>3</sub>)t³
 		</span>
 			<br> <br>
-			In questo modo possiamo calcolare una curva di qualsiasi grado<br><br>
+			In questo modo possiamo calcolare una curva di qualsiasi grado.<br><br>
 			<!-- Per una curva di 4. grado dovremmo calcolare i polinomi di Bernstein i quali saranno 5 come i punti della curva, che dovranno poi essere inseriti all’interno della formula. 
 			<br> <br> -->
 		</p>
@@ -380,8 +385,8 @@
 			<br> <br>
 			<img style="width:185px" src="assets\img\Formula bernstein 1.jpg"> <br><br>
 			Dove:<br><br>
-			<span style="font-family:'Times New Roman', Times, serif"> <i>i</i></span> varia da 0 a n, dove n è il grado della curva di Bézier.<br>
-			<span style="font-family:'Times New Roman', Times, serif"> <i>t</i></span> varia da 0 a 1, rappresentando il parametro lungo la curva di Bézier.<br><br>
+			<span style="font-family:'Times New Roman', Times, serif"> i</span> varia da 0 a n, dove n è il grado della curva di Bézier.<br>
+			<span style="font-family:'Times New Roman', Times, serif"> t</span> varia da 0 a 1, rappresentando il parametro lungo la curva di Bézier.<br><br>
 			Per calcolare un punto lungo la curva di Bézier in un dato punto 
 			t, si sommano i prodotti dei punti di controllo per i loro polinomi di Bernstein corrispondenti:<br><br>
 			<img style="width:185px" src="assets\img\Formula bernstein 2.jpg"> <br><br>

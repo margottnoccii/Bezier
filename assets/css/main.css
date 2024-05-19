@@ -15,12 +15,12 @@ body {
 }
 
 a {
-	color: rgb(145, 255, 0);
+	color: rgb(42, 165, 89);
 	text-decoration: none;
 	transition: all 1s;
 }
 a:visited {
-	color: rgb(42, 165, 89);
+	color: rgb(38, 136, 75);
 }
 a:hover{
 	text-decoration: underline;
@@ -31,9 +31,13 @@ a:hover{
 
 p {
 	margin: 0 0 1em 0;
-	max-width: 35em;
-}
+	max-width: 47em;
+	font-size: 20px;
 
+}
+/* .SIZECARATTERE{ font-size: 20px;
+
+} */
 h1 {
 	margin: 0;
 	font-size: 3em;
@@ -42,6 +46,7 @@ h1 {
 h4 {
 	margin: 0;
 	margin-bottom: 1em;
+	font-size: 20px;
 }
 
 iframe {
@@ -51,14 +56,16 @@ iframe {
 	width: 100%;
 	margin-bottom: -13em;
 	/* height: 300; */
+
 }
 
 header,
 section {
 	display: grid;
-	grid-template-columns: 1fr 4fr;
+	grid-template-columns: 2fr 5fr;
 	margin-bottom: 2em;
 	padding-top: 0.25em;
+	font-size: 20px;
 }
 
 .filetto {
@@ -76,6 +83,8 @@ section {
 ul {
 	/* margin: 0; */
 	/* padding: 0; */
+	padding-top: 0.25em;
+	font-size: 20px;
 }
 
 /* -- breakpoint: schermi piccoli, larghezza massima 500 pixel -- */
